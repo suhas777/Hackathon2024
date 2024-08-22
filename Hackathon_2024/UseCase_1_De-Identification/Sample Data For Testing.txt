@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "555-123-4567",
+      "ssn": "123-45-6789",
+      "credit_card": "4111-1111-1111-1111"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "555-987-6543",
+      "ssn": "987-65-4321",
+      "credit_card": "4111-1111-1111-1111"
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": "TX1001",
+      "user_email": "john.doe@example.com",
+      "amount": 150.75,
+      "date": "2024-08-22"
+    },
+    {
+      "transaction_id": "TX1002",
+      "user_email": "jane.smith@example.com",
+      "amount": 200.50,
+      "date": "2024-08-21"
+    }
+  ]
+}

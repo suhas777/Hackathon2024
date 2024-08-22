@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "023dadf8-cb8a-4c35-9192-091ddf790469",
+		"name": "HACKY_2024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27133834"
+	},
+	"item": [
+		{
+			"name": "https://dlp.googleapis.com/v2/projects/sg-hackathon-433204/locations/global/content:reidentify",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"reidentifyConfig\":{\r\n    \"infoTypeTransformations\":{\r\n      \"transformations\":[\r\n        {\r\n          \"infoTypes\":[\r\n            {\r\n              \"name\":\"SID\"\r\n            }\r\n          ],\r\n          \"primitiveTransformation\":{\r\n            \"cryptoDeterministicConfig\":{\r\n              \"cryptoKey\":{\r\n              \"kmsWrapped\": {\r\n                \"cryptoKeyName\": \"projects/project_id/locations/global/keyRings/dlp-keyring/cryptoKeys/dlp-key\",\r\n                \"wrappedKey\": \"CiQAtU4l4Q5B9ZLcdBtNrsAtZu7SLFf2ZDozPSllvygINC/3/Vvhy4cRXudfXe7NSv+G8pIiFzrcAs5IHcb2odpcHx8CORzlN/obxY1b9FOtiWuf+pkpjLpbnoM=\"\r\n              }\r\n            },\r\n              \"surrogateInfoType\":{\r\n                \"name\":\"SID\"\r\n              }\r\n            }\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"inspectConfig\":{\r\n    \"customInfoTypes\":[\r\n      {\r\n        \"infoType\":{\r\n          \"name\":\"SID\"\r\n        },\r\n        \"surrogateType\":{\r\n\r\n        }\r\n      }\r\n    ]\r\n  },\r\n  \"item\":{\r\n    \"value\": \"Pseudonymized Data\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dlp.googleapis.com/v2/projects/sg-hackathon-433204/locations/global/content:reidentify",
+					"protocol": "https",
+					"host": [
+						"dlp",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v2",
+						"projects",
+						"sg-hackathon-433204",
+						"locations",
+						"global",
+						"content:reidentify"
+					]
+				},
+				"description": "Re-Identification"
+			},
+			"response": []
+		}
+	]
+}
